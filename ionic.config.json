@@ -1,0 +1,7 @@
+{
+  "name": "ph2-u2-gonzalovillagra",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

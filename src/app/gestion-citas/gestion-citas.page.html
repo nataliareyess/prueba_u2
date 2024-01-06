@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Gestionar Citas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-item>
+    <ion-label position="stacked">Nueva Cita</ion-label>
+    <ion-input [(ngModel)]="nuevaCita.frase" placeholder="Ingrese Frase">Frase :</ion-input>
+    <div>-------------------------------------------------------------</div>
+    <ion-input [(ngModel)]="nuevaCita.autor" placeholder="Ingrese Autor">Autor : </ion-input>
+    <ion-icon expand="full" (click)="agregarCita()" src="assets/add.svg">Agregar +</ion-icon>
+  </ion-item>
+</ion-card>
+
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let cita of citas; let i = index">
+      {{ cita.frase }} 
+      <div>
+
+      </div>
+      - {{ cita.autor }}
+      <ion-icon slot="end" (click)="eliminarCita(i)" name="trash"  src="assets/trash.svg"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <div></div>
+  <div></div>
+
+ 
+</ion-content>
